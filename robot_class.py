@@ -101,7 +101,7 @@ class robot:
             dx = dx + self.measurement_noise * self.rand()
             dy = dy + self.measurement_noise * self.rand()
             
-            if (dx > self.measurement_range) or (dy > self.measurement_range):
+            if (abs(dx) > self.measurement_range) or (abs(dy) > self.measurement_range):
                 continue
             else:
                 measurements.append([lms,dx,dy])
